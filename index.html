@@ -3,75 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pathfinder | Sign Up</title>
+  <title>Nav + Footer Example</title>
 
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      background-image: linear-gradient(#0C0641, #243886, #1C0E38);
+      min-height: 200vh; /* just for demo so we can scroll */
+    }
+
+    /* ---------- NAV ---------- */
+    .nav {
+      background: #744FBB;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 20px;
+    }
+
+    .nav .link {
+      display: flex;
+      padding: 40px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: bold;
+      padding: 8px;
+      font-size: 20px;
+      transition: 0.2s ease-in-out;
+    }
+
+    .nav .logo {
+      height: 50px;
+    }
+
+    /* individual hover colors */
+    #home:hover { color: #FF8383; }
+    #stats:hover { color: #DB8A8B; }
+    #map:hover { color: #A7A1A5; }
+    #about:hover { color: #7FB3B8; }
+    #settings:hover { color: #5CC4CA; }
+
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav .link {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      position: fixed;
+      bottom: -200px; /* hidden below screen */
+      left: 0;
+      width: 100%;
+      background-color: #463d56;
+      color: #fff;
+      padding: 20px 40px;
+      transition: bottom 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    /* Logo */
+    .logo-footer img {
+      height: 40px;
+    }
+
+    /* App Store Buttons */
+    .store-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .store-buttons img {
+      height: 40px;
+    }
+
+    /* Socials */
+    .social {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 20px;
+      border-left: 1px solid #888;
+    }
+
+    .social p {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .social-links {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 8px 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .social-links i {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+
+    /* Divider line */
+    .footer-divider {
+      border-top: 1px solid #888;
+      margin: 15px 0;
+    }
+
+    /* Bottom links */
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #ccc;
+      flex-wrap: wrap;
+    }
+    .footer-bottom a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    /* ---------- MOBILE FIXES ---------- */
+    @media (max-width: 600px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+      }
+      .logo-footer img,
+      .store-buttons img {
+        height: auto;
+        max-height: 30px;
+        max-width: 100%;
+      }
+      .social {
+        border-left: none;
+        padding-left: 0;
+        align-items: center;
+      }
+      .social-links {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAVBAR (replace with your friend's navbar code) -->
-  <nav>
-    Pathfinder Navbar
-  </nav>
-
-  <!-- MAIN SIGNUP PAGE -->
-  <main>
-    <div class="signup-container">
-      <!-- Left Form -->
-      <div class="signup-form">
-        <h2>REGISTER</h2>
-
-        <form class="form-grid">
-          <!-- Row 1: First / Middle / Last -->
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Middle Name">
-          <input type="text" placeholder="Last Name">
-
-          <!-- Row 2: Address (wide) / Zip -->
-          <input type="text" placeholder="Home Address" class="col-2">
-          <input type="text" placeholder="Zip Code">
-
-          <!-- Row 3: Email / Phone -->
-          <input type="email" placeholder="Email Address" class="col-1-5">
-          <input type="tel" placeholder="Phone Number" class="col-1-5">
-
-          <!-- Row 4: Password / Confirm / Upload -->
-          <input type="password" placeholder="Password">
-          <input type="password" placeholder="Confirm Password">
-          <button type="button" class="upload-btn"><i class="fas fa-upload"></i> Upload ID</button>
-        </form>
-
-        <!-- Checkboxes -->
-        <div class="checkboxes">
-          <label><input type="checkbox" checked> I accept the general terms and conditions use.</label>
-          <label><input type="checkbox" checked> I accept the user privacy policy.</label>
-        </div>
-
-        <!-- Register -->
-        <button class="register-btn">Register</button>
-      </div>
-
-      <!-- Right Image -->
-      <div class="signup-image"></div>
+  <!-- NAVIGATION -->
+  <div class="nav">
+    <img class="logo" src="C:/Users/LENOVO/Documents/Index/Vector.png" alt="Logo">
+    <div class="link">
+      <a href="#" id="home">Home</a>
+      <a href="#" id="stats">Statistics</a>
+      <a href="#" id="map">Map</a>
+      <a href="#" id="about">About us</a>
+      <a href="#" id="settings">Setting</a>
     </div>
-  </main>
+  </div>
+
+  <p style="color:white; padding:20px; max-width:600px;">
+    Scroll down this page... the footer will appear when you scroll UP.<br><br>
+    This demo text is just here so the page is long enough to scroll.
+  </p>
 
   <!-- FOOTER -->
-  <footer>
+  <footer id="footer">
     <div class="footer-container">
-      <div class="logo">
-        <img src="assets/Vector.png" alt="Pathfinder Logo">
+      <!-- Logo -->
+      <div class="logo-footer">
+        <img src="C:/Users/LENOVO/Documents/Index/Footer.png" alt="Pathfinder Logo">
       </div>
 
+      <!-- App Store buttons -->
       <div class="store-buttons">
         <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
       </div>
 
+      <!-- Socials -->
       <div class="social">
         <p>FOLLOW US</p>
         <div class="social-links">
@@ -94,5 +242,23 @@
     </div>
   </footer>
 
+  <script>
+    let lastScrollTop = 0;
+    const footer = document.getElementById("footer");
+
+    window.addEventListener("scroll", function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop < lastScrollTop) {
+        // scrolling UP -> show footer
+        footer.style.bottom = "0";
+      } else {
+        // scrolling DOWN -> hide footer
+        footer.style.bottom = "-200px";
+      }
+      
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // avoid negative values
+    });
+  </script>
 </body>
 </html>
