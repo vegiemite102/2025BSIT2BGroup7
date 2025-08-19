@@ -56,6 +56,108 @@ body {
       }
     }
 
+/* ---------- SIGNUP SECTION ---------- */
+    .signup-container {
+      display: flex;
+	  justify-content:space-between;
+	  align-items:center;
+      max-width: 1200px;
+      width: 100%;
+      flex: 1;
+	  padding-left:100px;
+    }
+
+    .signup-form {	  
+      flex: 1 0 60%;
+      padding: 30px;
+	  
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+	  margin: 20px;
+	  gap: 40px;
+    }
+
+    .signup-form h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+	  padding-right:20px;
+    }
+
+    .form-grid input,
+    .upload-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.25);
+      color: white;
+      font-size: 14px;
+    }
+
+    .form-grid input::placeholder {
+      color: #ddd;
+    }
+
+    /* column span helpers */
+    .col-2 { grid-column: span 2; }
+    .col-3 { grid-column: span 3; }
+
+    /* Upload button */
+    .upload-btn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.35);
+    }
+
+    .checkboxes {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .checkboxes label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .checkboxes input {
+      margin-right: 8px;
+    }
+
+    .register-btn {
+      margin-top: 15px;
+      padding: 12px;
+      background: #ddd;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #333;
+    }
+	
+	.signup-image {
+	  flex: 1 0 40%;         
+      display: flex;          
+	  justify-content: flex-end;  
+	  align-items: center;   
+	  min-height: 500px; 
+	  padding-left:21%;
+    }
+
+    /* Right side image */
+    .signup-image img{
+	   max-width: 100%;
+	  height: auto;
+	  object-fit: contain;
+    }
+
 /* ---------- FOOTER ---------- */
 
     footer {
