@@ -1,32 +1,59 @@
-/* Global layout */
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background: linear-gradient(to bottom, #1a1a3f, #0b1a3f);
-  color: white;
-}
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      background-image: linear-gradient(#0C0641, #243886, #1C0E38);
+      min-height: 200vh; /* just for demo so we can scroll */
+    }
 
-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-}
+    /* ---------- NAV ---------- */
+    .nav {
+      background: #744FBB;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 20px;
+    }
 
-/* Navbar placeholder */
-nav {
-  background: #6a47a1;
-  padding: 15px 40px;
-  color: white;
-  font-weight: bold;
-}
+    .nav .link {
+      display: flex;
+      padding: 40px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: bold;
+      padding: 8px;
+      font-size: 20px;
+      transition: 0.2s ease-in-out;
+    }
+
+    .nav .logo {
+      height: 50px;
+    }
+
+    /* individual hover colors */
+    #home:hover { color: #FF8383; }
+    #stats:hover { color: #DB8A8B; }
+    #map:hover { color: #A7A1A5; }
+    #about:hover { color: #7FB3B8; }
+    #settings:hover { color: #5CC4CA; }
+
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav .link {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+    }
 
 /* Signup section */
 .signup-container {
@@ -229,3 +256,4 @@ footer {
     gap: 10px;
   }
 }
+
