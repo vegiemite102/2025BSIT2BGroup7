@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathfinder - Sign Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      background-image: linear-gradient(#0C0641, #243886, #1C0E38);
+      min-height: 100vh;
+      color: white;
+    }
+
+    /* ---------- NAV ---------- */
+    .nav {
+      background: #744FBB;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 20px;
+    }
+
+    .nav .link {
+      display: flex;
+      padding: 8px;
+      padding-right: 50px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: bold;
+      padding: 8px;
+      font-size: 15px;
+      transition: 0.2s ease-in-out;
+    }
+
+    .nav-logo {
+      height: 30px;
+    }
+
+    /* individual hover colors */
+    #home:hover { color: #FF8383; }
+    #stats:hover { color: #DB8A8B; }
+    #map:hover { color: #A7A1A5; }
+    #about:hover { color: #7FB3B8; }
+    #settings:hover { color: #5CC4CA; }
+
+    /* ---------- SIGNUP SECTION ---------- */
+    .signup-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 40px auto;
+      width: 100%;
+      gap: 40px;
+      flex: 1;
+    }
+
+    .signup-form {
+      flex: 1 1 60%;
+      padding: 30px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+    }
+
+    .signup-form h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .form-grid input,
+    .upload-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.25);
+      color: white;
+      font-size: 14px;
+    }
+
+    .form-grid input::placeholder {
+      color: #ddd;
+    }
+
+    /* column span helpers */
+    .col-2 { grid-column: span 2; }
+    .col-3 { grid-column: span 3; }
+
+    /* Upload button */
+    .upload-btn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.35);
+    }
+
+    .checkboxes {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .checkboxes label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .checkboxes input {
+      margin-right: 8px;
+    }
+
+    .register-btn {
+      margin-top: 15px;
+      padding: 12px;
+      background: #ddd;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Right side image */
+    .signup-image {
+      flex: 1 1 40%;
+      background: url("https://i.ibb.co/0mTc7s0/smiling-driver.jpg") center/cover no-repeat;
+      border-radius: 10px;
+      min-height: 500px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background-color: #463d56;
+      color: #fff;
+      padding: 20px 40px;
+      margin-top: auto;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo img {
+      height: 40px;
+    }
+
+    .store-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .store-buttons img {
+      height: 40px;
+    }
+
+    .social {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 20px;
+      border-left: 1px solid #888;
+    }
+
+    .social p {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .social-links {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 8px 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .social-links i {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+
+    .footer-divider {
+      border-top: 1px solid #888;
+      margin: 15px 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #ccc;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <img src="assets/Vector.png" alt="Pathfinder Logo" class="nav-logo">
+    <div class="link">
+      <a href="#" id="home">Home</a>
+      <a href="#" id="stats">Stats</a>
+      <a href="#" id="map">Map</a>
+      <a href="#" id="about">About</a>
+      <a href="#" id="settings">Settings</a>
+    </div>
+  </nav>
+
+  <!-- SIGNUP SECTION -->
+  <section class="signup-container">
+    <!-- LEFT FORM -->
+    <div class="signup-form">
+      <h2>Create Your Account</h2>
+      <form>
+        <div class="form-grid">
+          <!-- Row 1 -->
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Middle Name">
+          <input type="text" placeholder="Last Name">
+
+          <!-- Row 2 -->
+          <input type="text" placeholder="Username" class="col-3">
+
+          <!-- Row 3 -->
+          <input type="email" placeholder="Email" class="col-2">
+          <input type="text" placeholder="Phone">
+
+          <!-- Row 4 -->
+          <input type="text" placeholder="Home Address" class="col-2">
+          <button type="button" class="upload-btn">Upload License</button>
+        </div>
+
+        <div class="checkboxes">
+          <label><input type="checkbox"> I agree to the Terms and Conditions</label>
+          <label><input type="checkbox"> Subscribe to newsletter</label>
+        </div>
+
+        <button type="submit" class="register-btn">Register</button>
+      </form>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="signup-image"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="assets/Vector.png" alt="Pathfinder Logo">
+      </div>
+
+      <div class="store-buttons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+      </div>
+
+      <div class="social">
+        <p>FOLLOW US</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i>@pathfinder.ph</a>
+          <a href="#"><i class="fab fa-facebook"></i>pathfinder.ph</a>
+          <a href="tel:09489674321"><i class="fas fa-phone"></i>0948 967 4321</a>
+          <a href="mailto:pathfinder@gmail.com"><i class="fas fa-envelope"></i>pathfinder@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>© 2025 PATHFINDER. All rights reserved.</p>
+      <p>
+        <a href="#">PRIVACY POLICY</a> | 
+        <a href="#">TERMS AND CONDITIONS</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
