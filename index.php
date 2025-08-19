@@ -4,5 +4,6 @@
 </head>
 <body    >
     <?php require "views/nav.php"; ?>
+    <?php require "views/footer.php"; ?>
     </body>
 </html>    
