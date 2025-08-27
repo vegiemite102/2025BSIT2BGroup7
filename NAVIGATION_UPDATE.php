@@ -1,0 +1,202 @@
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      background-image: linear-gradient(#0C0641, #243886, #1C0E38); /* BACKGROUND COLOR*/
+      min-height: 100vh; /* ensures footer stays at bottom */
+    }
+
+    /* ---------- NAV ---------- */
+    .nav {
+      background: linear-gradient(to right, #46199D, #190937);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 20px;
+      position: fixed;
+    }
+
+    .nav .link {
+      display: flex;
+      padding: 8px;
+	  padding-right: 50px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: bold;
+      padding: 8px;
+      font-size: 15px;
+      transition: 0.2s ease-in-out;
+    }
+
+    .nav .logo {
+      height: 30px;
+    }
+
+    /* individual hover colors */
+    #home:hover { color: #FF8383; }
+    #stats:hover { color: #DB8A8B; }
+    #map:hover { color: #A7A1A5; }
+    #about:hover { color: #7FB3B8; }
+    #settings:hover { color: #5CC4CA; }
+
+
+    .text-container {                                /*////////////////////////////////////////*/
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    }
+
+    .A1 img {                                /*////////////////////////////////////////*/
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .text-container2 {                                /*////////////////////////////////////////*/
+    text-align: center;
+    margin-top: 100px;
+    font-size: 25px;
+    color: #ffffff;
+    }
+
+    .A2 img {                                /*////////////////////////////////////////*/
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      text-align: center;
+      margin-top: 120px;
+    }
+
+
+    .text-container3 {                                /*////////////////////////////////////////*/
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #ffffff;
+    }
+
+    .A3 img {                                /*////////////////////////////////////////*/
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      text-align: center;
+      margin-top: 90px;
+    }
+
+
+    .text-container4 {                                /*////////////////////////////////////////*/
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav .link {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+    }
+
+/* ---------- FOOTER ---------- */
+
+    footer {
+      margin-top: auto;
+      background-color: #463d56;
+      color: #fff;
+      padding: 20px 40px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .footer-container .logo{
+      height: 40px;
+    }
+
+    .store-buttons {
+      display: flex;
+      gap: 10px;
+	  height: 40px;
+    }
+
+    /* Socials */
+    .social {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 20px;
+      border-left: 1px solid #888;
+    }
+
+    .social p {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .social-links {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 8px 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .social-links i {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+
+    /* Divider line */
+    .footer-divider {
+      border-top: 1px solid #888;
+      margin: 15px 0;
+    }
+
+    /* Bottom links */
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #ccc;
+      flex-wrap: wrap;
+    }
+    .footer-bottom a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+
+  
+  </style>
