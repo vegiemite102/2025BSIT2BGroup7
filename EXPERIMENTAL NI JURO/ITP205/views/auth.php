@@ -12,8 +12,7 @@ $mode = $_GET['mode'] ?? 'login';
   <h2>LOG IN</h2>
 
   <!-- Login form -->
-  <form method="post" action="index.php?
-  type=login&action=create">
+  <form method="post" action="index.php?page=home">
     <input name="username" 
     placeholder="Username" type="text" required/>
     <input name="password" 
@@ -70,3 +69,4 @@ $mode = $_GET['mode'] ?? 'login';
   </div>
 </section>
 <?php endif; ?>
+
