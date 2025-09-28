@@ -1,7 +1,8 @@
-  <?php
-$username = $_POST['username'];
-$password = $_POST['password'];
+<?php
+$username = $_POST['username'] ?? null;
+$password = $_POST['password'] ?? null;
 ?>
+
 
   <div class="nav">
     <img class="logo" src="images/Logo.png" alt="Logo">
@@ -14,3 +15,5 @@ $password = $_POST['password'];
        <p>User: <?php echo $username; ?></p>
     </div>
   </div>
+
+  
