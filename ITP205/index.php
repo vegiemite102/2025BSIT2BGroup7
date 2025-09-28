@@ -11,12 +11,13 @@
 
           <main >
         <?php
-            $page = $_GET['page'] ?? 'login';
+            $page = $_GET['page'] ?? 'auth';
             require "views/$page.php";
         ?>
         </main>
 
     <?php require "views/footer.php"; ?>
 </body>
+
 
 </html>     
