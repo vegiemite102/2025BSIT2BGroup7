@@ -40,24 +40,27 @@ $mode = $_GET['mode'] ?? 'login';
 <section class="signup-container">
   <div class="signup-form">
     <h2>Create Your Account</h2>
-    <form>
+    <form method="post" action="index.php?page=home">
       <div class="form-grid">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Middle Name">
-        <input type="text" placeholder="Last Name">
+        <input type="text" placeholder="First Name" name="first_name" required>
+        <input type="text" placeholder="Middle Name" name="middle_name" required>
+        <input type="text" placeholder="Last Name" name="last_name" required>
 
-        <input type="text" placeholder="Username" class="col-3">
+        <input type="text" placeholder="Username" class="col-3" name="username" required>
 
-        <input type="email" placeholder="Email" class="col-2">
-        <input type="text" placeholder="Phone">
+        <input type="email" placeholder="Email" class="col-2" name="email" required>
+        <input type="text" placeholder="Phone" name="phone">
 
-        <input type="text" placeholder="Home Address" class="col-2">
+        <input type="text" placeholder="Home Address" class="col-2" name="address" required>
         <button type="button" class="upload-btn">Upload License</button>
+
+        <input type="password" placeholder="Password" name="password" required>
+        <input type="password" placeholder="Confirm Password" name="confirm_password" required>
       </div>
 
       <div class="checkboxes">
-        <label><input type="checkbox"> I agree to the Terms and Conditions</label>
-        <label><input type="checkbox"> Subscribe to newsletter</label>
+        <label><input type="checkbox" name="terms" required> I agree to the Terms and Conditions</label>
+        <label><input type="checkbox" name="newsletter"> Subscribe to newsletter</label>
       </div>
 
       <button type="submit" class="register-btn">Register</button>
@@ -69,4 +72,5 @@ $mode = $_GET['mode'] ?? 'login';
   </div>
 </section>
 <?php endif; ?>
+
 
