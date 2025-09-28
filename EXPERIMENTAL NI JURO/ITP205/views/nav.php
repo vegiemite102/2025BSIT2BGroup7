@@ -1,3 +1,8 @@
+  <?php
+$username = $_POST['username'];
+$password = $_POST['password'];
+?>
+
   <div class="nav">
     <img class="logo" src="images/Logo.png" alt="Logo">
     <div class="link">
@@ -6,7 +11,6 @@
       <a href="index.php?page=map" id="map">Map</a>
       <a href="index.php?page=about" id="about">About us</a>
       <a href="index.php?page=settings" id="settings">Setting</a>
+       <p>User: <?php echo $username; ?></p>
     </div>
   </div>
-
-  
