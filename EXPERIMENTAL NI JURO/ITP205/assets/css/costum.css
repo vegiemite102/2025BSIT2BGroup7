@@ -184,7 +184,7 @@ main {
 /* ---------- SIGNUP SECTION ---------- */
 .signup-container {
   display: flex;
-  justify-content:space-between;
+  justify-content: flex-start;
 	align-items:center;
   max-width: 1200px;
   width: 100%;
@@ -199,6 +199,7 @@ main {
   border-radius: 10px;
   margin: 20px;
   gap: 40px;
+  margin-right: auto;
 }
 
 .signup-form h2 {
@@ -266,20 +267,14 @@ main {
     }
 	
 	.signup-image {
-	  flex: 1 0 40%;         
-      display: flex;          
-	  justify-content: flex-end;  
-	  align-items: center;   
-	  min-height: 500px; 
-	  padding-left:21%;
-    }
+  flex: 1 0 40%;         
+  display: flex;          
+  justify-content: center;  
+  align-items: center;   
+  min-height: 500px;
+  padding-left: 0; 
+}
 
-    /* Right side image */
-    .signup-image img{
-	   max-width: 100%;
-	  height: auto;
-	  object-fit: contain;
-    }
 
 /* ========== HERO / BANNER ========== */
 .Banner {
