@@ -18,7 +18,66 @@ img {
 }
 
 /* ========== NAVIGATION ========== */
-.nav {
+
+/*Simple dropdown styling*/
+
+/* Left side (Logo + navigation links) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* space between each link */
+}
+
+/* Right side (Login/Signup or user dropdown) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 160px;
+  right: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+}
+
+.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar {
+
+  padding: 10px 20px;
+
   background: linear-gradient(to right, #46199D, #190937);
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -26,23 +85,21 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
   z-index: 9999;
 }
 
-.nav .logo {
+.navbar .nav-left .logo {
   height: 30px;
+  width: auto;
   cursor: pointer;
 }
 
-.nav .link {
-  display: flex;
-  align-items: center;
+.navbar .link {
   gap: 20px;
   padding: 8px 0;
 }
 
-.nav a {
+.navbar a {
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -51,7 +108,7 @@ img {
   border-radius: 6px;
   transition: 0.2s ease-in-out;
 }
-.nav a:hover { cursor: pointer; }
+.navbar a:hover { cursor: pointer; }
 
 /* Hover colors */
 #home:hover { color: #FF8383; }
@@ -71,20 +128,20 @@ main {
 
 /* Responsive nav (mobile) */
 @media (max-width: 600px) {
-  .nav {
+  .navbar {
     flex-direction: column;
     align-items: center;
     height: auto;
     padding: 14px 16px;
   }
-  .nav .logo { margin-bottom: 10px; }
-  .nav .link {
+  .navbar .logo { margin-bottom: 10px; }
+  .navbar .link {
     flex-direction: column;
     width: 100%;
     gap: 12px;
     align-items: center;
   }
-  .nav a {
+  .navbar a {
     width: 100%;
     max-width: 320px;
     text-align: center;
@@ -92,7 +149,7 @@ main {
     padding: 12px 16px;
     border-radius: 10px;
   }
-  .nav a:hover {
+  .navbar a:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
@@ -184,7 +241,7 @@ main {
 /* ---------- SIGNUP SECTION ---------- */
 .signup-container {
   display: flex;
-  justify-content:space-between;
+  justify-content: flex-start;
 	align-items:center;
   max-width: 1200px;
   width: 100%;
@@ -199,6 +256,7 @@ main {
   border-radius: 10px;
   margin: 20px;
   gap: 40px;
+  margin-right: auto;
 }
 
 .signup-form h2 {
@@ -266,20 +324,14 @@ main {
     }
 	
 	.signup-image {
-	  flex: 1 0 40%;         
-      display: flex;          
-	  justify-content: flex-end;  
-	  align-items: center;   
-	  min-height: 500px; 
-	  padding-left:21%;
-    }
+  flex: 1 0 40%;         
+  display: flex;          
+  justify-content: center;  
+  align-items: center;   
+  min-height: 500px;
+  padding-left: 0; 
+}
 
-    /* Right side image */
-    .signup-image img{
-	   max-width: 100%;
-	  height: auto;
-	  object-fit: contain;
-    }
 
 /* ========== HERO / BANNER ========== */
 .Banner {
@@ -877,4 +929,51 @@ main {
 @media (max-width: 560px) {
   .top-grid { grid-template-columns: 1fr; }
   .cta .btn { width: 100%; text-align: center; }
+}
+
+
+/*Admin*/
+.admin-banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.admin-banner img.banner {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+.admin-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.admin-banner-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3em;
+}
+.admin-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+}
+.admin-card {
+  background-color: #1b1b1b;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.admin-card:hover {
+  transform: translateY(-5px);
+}
+.admin-card h2 {
+  margin-bottom: 10px;
 }
